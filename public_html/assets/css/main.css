@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body{padding-bottom:0;padding-top:50px;}
+img{max-width:100%;}
+
+*{font-weight: 300;}
+h1{font-weight:300;margin-top:15px;margin-bottom:15px;}
+h2{font-weight:200;margin-top:15px;margin-bottom:15px;}
+h3{font-weight:100;margin-top:15px;margin-bottom:15px;}
+
+.mt-0{margin-top:0;}
+.mt-15{margin-top:15px;}
+.mb-0{margin-bottom:0;}
+.mb-25{margin-bottom:25px;}
+.mtb-0{margin-bottom:0;margin-top:0;}
+.mtb-25{margin-top:25px;margin-bottom:25px;}
+
+.p-0{padding-top:0;padding-bottom:0;padding-left:0;padding-right:0;}
+
+.jumbotron{display:flex;align-items:center;background-image:url(../images/slime-background.jpg);background-size:contain;height:90vh;}
+.jumbotron h2{margin-bottom:30px;}
+
+footer {background-color:#333;color:#fff;padding:40px 0;margin-top:25px;}
+
+.form-control {margin: 10px 0;}
+
+/* Admin Section */
+th{white-space: nowrap;}
