@@ -12,17 +12,17 @@ class AdminControllers extends Controller
 {
   public function dashboard()
   {
-    $orders = DB::table('slime_orders')->orderBy('date', 'desc')->paginate(15);
+    $orders = DB::table('buildyourslime_orders')->orderBy('date', 'desc')->paginate(15);
     return view('admin.dashboard', ['orders' => $orders]);
   }
 
   public function lab()
   {
-    $premades = DB::table('premades')->get();
-    $addins = DB::table('addins')->get();
-    $colors = DB::table('colors')->get();
-    $glitters = DB::table('glitters')->get();
-    $sizes = DB::table('sizes')->get();
+    $premades = DB::table('buildyourslime_premades')->get();
+    $addins = DB::table('buildyourslime_addins')->get();
+    $colors = DB::table('buildyourslime_colors')->get();
+    $glitters = DB::table('buildyourslime_glitters')->get();
+    $sizes = DB::table('buildyourslime_sizes')->get();
     return view('admin.lab', ['premades' => $premades, 'addins' => $addins, 'colors' => $colors, 'glitters' => $glitters, 'sizes' =>$sizes]);
   }
 
@@ -44,7 +44,7 @@ class AdminControllers extends Controller
       $premade_slug = $request->input('premade_slug');
     endif;
 
-    DB::table('premades')->where('id', $premade_id)->update(['slug' => $premade_slug, 'name' => $premade_name, /*'image' => $premade_image,*/ 'description' => $premade_description]);
+    DB::table('buildyourslime_premades')->where('id', $premade_id)->update(['slug' => $premade_slug, 'name' => $premade_name, /*'image' => $premade_image,*/ 'description' => $premade_description]);
 
     return redirect('/admin/lab');
   }

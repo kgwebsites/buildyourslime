@@ -70,7 +70,7 @@ class PaymentControllers extends Controller
     $price_c = $price * 100;
 
     //Update orders database
-    DB::table('slime_orders')->insert(['name' => $name, 'email' => $email, 'street' => $street, 'street2' => $street2, 'city' => $city, 'state' => $state, 'zip' => $zip, 'size' => $size, 'price' => $price, 'premade_name' => $premade_name, 'color' => $color, 'glitter' => $glitter, 'addins' => $addins]);
+    DB::table('buldyourslime_orders')->insert(['name' => $name, 'email' => $email, 'street' => $street, 'street2' => $street2, 'city' => $city, 'state' => $state, 'zip' => $zip, 'size' => $size, 'price' => $price, 'premade_name' => $premade_name, 'color' => $color, 'glitter' => $glitter, 'addins' => $addins]);
 
     // Set your secret key: remember to change this to your live secret key in production
     // See your keys here: https://dashboard.stripe.com/account/apikeys
